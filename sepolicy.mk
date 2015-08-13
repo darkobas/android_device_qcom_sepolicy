@@ -56,6 +56,7 @@ BOARD_SEPOLICY_UNION += \
        qseecomd.te \
        mcStarter.te \
        keystore.te \
+       kernel.te \
        ims.te \
        imscm.te \
        healthd.te \
