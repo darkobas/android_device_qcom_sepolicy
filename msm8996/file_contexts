@@ -48,7 +48,10 @@
 /dev/block/platform/soc/624000.ufshc/by-name/recovery                           u:object_r:recovery_block_device:s0
 /dev/block/platform/soc/624000.ufshc/by-name/cache                              u:object_r:cache_block_device:s0
 /dev/block/platform/soc/624000.ufshc/by-name/frp                                u:object_r:frp_block_device:s0
-
+/dev/block/platform/soc/624000.ufshc/by-name/mdm1m9kefs1                        u:object_r:efs_boot_dev:s0
+/dev/block/platform/soc/624000.ufshc/by-name/mdm1m9kefs2                        u:object_r:efs_boot_dev:s0
+/dev/block/platform/soc/624000.ufshc/by-name/mdm1m9kefs3                        u:object_r:efs_boot_dev:s0
+/dev/block/platform/soc/624000.ufshc/by-name/mdm1m9kefsc                        u:object_r:efs_boot_dev:s0
 
 # eMMC devices
 /dev/block/platform/soc/7464900.sdhci/by-name/fsc                               u:object_r:modem_efs_partition_device:s0
@@ -67,13 +70,16 @@
 /dev/block/platform/soc/7464900.sdhci/by-name/recovery                          u:object_r:recovery_block_device:s0
 /dev/block/platform/soc/7464900.sdhci/by-name/cache                             u:object_r:cache_block_device:s0
 /dev/block/platform/soc/7464900.sdhci/by-name/frp                               u:object_r:frp_block_device:s0
+/dev/block/platform/soc/7464900.sdhci/by-name/mdm1m9kefs1                       u:object_r:efs_boot_dev:s0
+/dev/block/platform/soc/7464900.sdhci/by-name/mdm1m9kefs2                       u:object_r:efs_boot_dev:s0
+/dev/block/platform/soc/7464900.sdhci/by-name/mdm1m9kefs3                       u:object_r:efs_boot_dev:s0
+/dev/block/platform/soc/7464900.sdhci/by-name/mdm1m9kefsc                       u:object_r:efs_boot_dev:s0
 
 ###################################
 # System files
 #
 /system/bin/qvop-daemon u:object_r:qvop_exec:s0
 /system/bin/tloc_daemon u:object_r:tlocd_exec:s0
-/system/vendor/bin/seccamd u:object_r:seccamd_exec:s0
 
 ###################################
 # data files

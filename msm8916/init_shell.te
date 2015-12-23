@@ -25,18 +25,8 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-type seccamd, domain;
-type seccamd_exec, exec_type, file_type;
-
-init_daemon_domain(seccamd)
-
-# Allow finding the media related services
-allow seccamd { mediaserver_service surfaceflinger_service }:service_manager find;
-
-# Allow interacting with camera related service, including callbacks
-binder_use(seccamd)
-binder_call(seccamd, surfaceflinger)
-binder_call(seccamd, mediaserver)
-
-# Allow interacting with qseecom
-allow seccamd tee_device:chr_file rw_file_perms;
+# media_codecs_eld_prop - to choose target specific media_codecs.xml
+# media_settings_xml_prop - to choose target specific media_profiles.xml
+allow qti_init_shell {
+    media_msm8939hw_prop
+}:property_service set;
